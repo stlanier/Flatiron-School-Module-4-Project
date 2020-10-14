@@ -8,7 +8,7 @@ I'm now attempting to build models that excel at detecting negative reviews, foc
 ### Contents of Repository
 
 * **notebooks**
-   * **preprocessing.ipynb** and **preprocessing.py** are the notebook and module where I perform all data preprocessing––tfidf vectorization, bigrams, SMOTE, etc.
+   * **preprocessing.ipynb** and **preprocessing.py** are the notebook and module where I perform all data preprocessing––tfidf vectorization, bigrams, SMOTE, etc. **_Run this notebook to generate the datasets used in this analysis_**.
    * **eda.ipynb** contains my exploratory data analysis, including explorations of word frequency distributions and n-grams.
    * **multiclass_models** and **analysis_util.py** are the notebook and module where I train models for 3-class classification (negative review, positive review, no sentiment).
    * **negative_review_detection** contains models for solely detecting negative reviews.
