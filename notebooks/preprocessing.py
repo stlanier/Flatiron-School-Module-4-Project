@@ -45,9 +45,14 @@ def w2v_vectorize(wv, docs):
     w2v_docs = []
     for doc in docs:
         doc_vec = np.zeros(100)
+        count=0
         for word in doc:
-            doc_vec+=wv[word]
-        doc_vec/=len(doc)
+            if word not in wv:
+                continue
+            else:
+                doc_vec+=wv[word]
+                count+=1
+        doc_vec/=count
         w2v_docs.append(doc_vec)
     return w2v_docs
     
