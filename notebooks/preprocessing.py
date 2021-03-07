@@ -1,4 +1,5 @@
 import string
+import numpy as np
 import re
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -39,8 +40,17 @@ def tfidfVectorize(X_train, *X_test):
     for test in X_test:
         results.append(vectorizer.transform(test))
     return tuple(results)
-    
 
+def w2v_vectorize(wv, docs):
+    w2v_docs = []
+    for doc in docs:
+        doc_vec = np.zeros(100)
+        for word in doc:
+            doc_vec+=wv[word]
+        doc_vec/=len(doc)
+        w2v_docs.append(doc_vec)
+    return w2v_docs
+    
 number_to_sentiment = {0: 'Negative emotion', 1: 'No emotion toward brand or product', 2: 'Positive emotion'}
 sentiment_to_number = {'Negative emotion': 0, 'No emotion toward brand or product':1, 'Positive emotion':2}
 
