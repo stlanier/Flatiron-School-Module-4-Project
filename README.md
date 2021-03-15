@@ -2,7 +2,7 @@
 
 For my fourth module project for Flatiron School, I chose a natural language processing problem, trying to classify [product reviews](https://data.world/crowdflower/brands-and-product-emotions) as positive, negative, or neither. Key challenges when approaching this problem were the multi-class nature of the dataset and class imbalances––reviews without emotion were much more common than either positive or negative reviews. Because of class imbalances, I used F1 scores (rather than accuracy) to determine model success, and my best models achieved 0.53 F1 scores on test data.
 
-I'm now attempting to build models that excel at detecting negative reviews, focusing on improving recall of negative reviews (WIP).
+I'm now attempting to build models that excel at detecting negative reviews, focusing on improving recall of negative reviews using isolation trees and word embeddings (WIP).
 
 ## Getting Started
 ### Contents of Repository
